@@ -1,7 +1,7 @@
 package Lec26;
 
 public class Stack {
-	private int[] arr;
+	protected int[] arr;
 	private int top;
 
 	public Stack() {
@@ -29,17 +29,16 @@ public class Stack {
 	}
 
 	public void push(int item) throws Exception {
-		if(isfull()) {
+		if (isfull()) {
 			throw new Exception("BkLol Stack full hai");
 		}
 		top++;
 		arr[top] = item;
 
-		
 	}
 
 	public int pop() throws Exception {
-		if(isEmpty()) {
+		if (isEmpty()) {
 			throw new Exception("BkLol Stack khali hai");
 		}
 		int rv = arr[top];
@@ -48,7 +47,7 @@ public class Stack {
 	}
 
 	public int peek() throws Exception {
-		if(isEmpty()) {
+		if (isEmpty()) {
 			throw new Exception("BkLol Stack khali hai");
 		}
 		int rv = arr[top];
