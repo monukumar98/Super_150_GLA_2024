@@ -27,15 +27,18 @@ public class Maximum_Sum_BST {
 		boolean isbst = true;
 		long min = Long.MAX_VALUE;
 		long max = Long.MIN_VALUE;
-		int sum=0;//bt sum
-		int ans=0;//bstt ans
+		int sum = 0;// bt sum
+		int ans = 0;// bstt ans
 
 	}
+
 	class Solution {
-	    public int maxSumBST(TreeNode root) {
-	        
-	    }
-	    public BstPair VaildBst(TreeNode root) {
+		public int maxSumBST(TreeNode root) {
+			return VaildBst(root).ans;
+
+		}
+
+		public BstPair VaildBst(TreeNode root) {
 			if (root == null) {
 				return new BstPair();
 			}
@@ -47,10 +50,9 @@ public class Maximum_Sum_BST {
 			sbp.min = Math.min(lbp.min, Math.min(rbp.min, root.val));
 			if (lbp.isbst && rbp.isbst && lbp.max < root.val && rbp.min > root.val) {
 				sbp.isbst = true;
-				
+
 			} else {
 				sbp.isbst = false;
-			
 
 			}
 
